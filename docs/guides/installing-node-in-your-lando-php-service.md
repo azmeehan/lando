@@ -33,7 +33,9 @@ Some frontend tooling kits like [Emulsify](https://www.drupal.org/project/emulsi
 
 You can, however, get around it by installing the needed dependencies directly in the service that requires them.
 
-We've found installing `node` inside a Lando PHP service to generally be the path of least resistance.
+We've found installing `node` inside a Lando PHP service to generally be the path of least resistance.  
+
+If you experience performance issues after trying this you may need to consider excluding the node_modules directory from your land.base.yml file to reduce the number of files docker desktop needs to sync with.  See the Performance section of the Docs for more info. 
 
 ## 1. Using build steps
 
